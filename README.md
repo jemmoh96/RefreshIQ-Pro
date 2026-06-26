@@ -2,7 +2,6 @@
 
 > Enterprise auto-refresh and website monitoring — free, privacy-first, local-only.
 
-[![CI](https://github.com/your-org/refreshiq-pro/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/refreshiq-pro/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
