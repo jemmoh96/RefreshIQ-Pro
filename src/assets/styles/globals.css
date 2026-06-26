@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --riq-green:       #22c55e;
+    --riq-amber:       #f59e0b;
+    --riq-blue:        #3b82f6;
+    --riq-red:         #ef4444;
+    --riq-bg:          #0b0f1a;
+    --riq-surface:     #141929;
+    --riq-elevated:    #1a2038;
+    --riq-border:      #252d4a;
+    --riq-text:        #e2e8ff;
+    --riq-muted:       #6b7ab8;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-riq-surface border border-riq-border rounded-lg;
+    @apply shadow-card;
+    backdrop-filter: blur(8px);
+  }
+
+  .glass-input {
+    @apply bg-riq-elevated border border-riq-border rounded text-riq-text text-sm;
+    @apply placeholder:text-riq-muted/60;
+    @apply focus:outline-none focus:border-riq-green focus:ring-1 focus:ring-riq-green/30;
+    @apply transition-colors duration-150;
+  }
+
+  .btn-primary {
+    @apply bg-riq-green text-riq-bg font-semibold rounded;
+    @apply hover:brightness-110 active:scale-[0.97];
+    @apply transition-all duration-150;
+    @apply shadow-glow-green;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent border border-riq-border text-riq-muted rounded;
+    @apply hover:border-riq-border-light hover:text-riq-text;
+    @apply transition-all duration-150;
+  }
+
+  .btn-danger {
+    @apply bg-riq-red/10 border border-riq-red/30 text-riq-red rounded;
+    @apply hover:bg-riq-red/20;
+    @apply transition-all duration-150;
+  }
+
+  .preset-chip {
+    @apply px-3 py-1.5 rounded-full text-xs font-medium border;
+    @apply border-riq-border text-riq-muted;
+    @apply hover:border-riq-green/50 hover:text-riq-green;
+    @apply cursor-pointer select-none;
+    @apply transition-all duration-100;
+  }
+
+  .preset-chip.active {
+    @apply bg-riq-green/15 border-riq-green text-riq-green;
+  }
+
+  .tab-btn {
+    @apply flex-1 py-2.5 text-xs font-semibold tracking-wide uppercase;
+    @apply text-riq-muted hover:text-riq-text;
+    @apply border-b-2 border-transparent;
+    @apply transition-all duration-150 cursor-pointer;
+  }
+
+  .tab-btn.active {
+    @apply text-riq-green border-riq-green;
+  }
+
+  .section-label {
+    @apply text-2xs font-semibold uppercase tracking-widest text-riq-muted/70;
+  }
+
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+}
